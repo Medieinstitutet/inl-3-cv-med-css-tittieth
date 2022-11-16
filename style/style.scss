@@ -1,0 +1,25 @@
+
+$base: #faeee7;
+$olive: #919478;
+$pink: #f7c9c9;
+$dark-pink: #fa709a;
+$dark-grey: #212427;
+
+
+/* Normalize */
+@import "vendor/normalize";
+
+/* styling för mobil */
+@media screen and (min-width: 325px) {
+  @import "layout/base";
+}
+
+/*styling för tablet*/
+@media screen and (min-width: 600px) {
+  @import "layout/tablet";
+}
+
+/*styling för desktop*/
+@media screen and (min-width: 1024px) {
+  @import "layout/desktop";
+}

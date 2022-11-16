@@ -1,0 +1,138 @@
+
+/* Gör om hamburgermenyn till en vanlig horizontell navigeringsmeny */
+.nav-toggle-label {
+    display: none;
+}
+
+.nav-header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+
+}
+
+.logo {
+    grid-column: 2 / 3;
+}
+
+nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+
+}
+
+nav li {
+    margin-left: 2em;
+    margin-bottom: 0;
+}
+
+nav a {
+    opacity: 1;
+    position: relative;
+    font-size: 1.3rem;
+}
+
+nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: #4f463a;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    transform: scale(1, 1);
+}
+
+/*Hamburgermeny slut slut */
+
+/* ----------------------Style för alla h1----------------- */
+
+h1 {
+    margin: 150px 50px 50px 150px;
+}
+
+/* ----------------------style för de horizontella linjerna under rubrikerna----------------- */
+
+hr {
+    margin: 20px auto 70px auto;
+}
+
+/* ----------------------Texten front delveloper...----------------- */
+
+.profession {
+    margin: 10px 60px 20px 180px;  
+}
+
+/*-------- Behållare för första delen---------- */
+
+.section-hello {
+    flex-direction: row;
+    align-content: space-around;
+}
+
+/*--------- boxen med Hi I am --------------*/
+
+.box {
+    width: 60%;
+    min-height: 100vh;
+}
+
+/* ----------------------boxarna med info om mig och erfarenhet----------------- */
+
+.get-to-know-me,
+.experience-container {
+    min-height: 65vh;
+}
+
+/* ----------------------boxen med profilbilden----------------- */
+
+.picture-container {
+    position: relative;
+    width: 40%;
+    min-height: 100vh;
+    
+}
+
+/* ----------------------Profilbilden----------------- */
+
+.picture-container img {
+    position: relative;
+    top: -100px;
+    right: 100px;
+    margin: 0;
+    width: 500px;
+    height: 600px;
+}
+
+/* ----------------------omsluter formuläret----------------- */
+
+.form-container {
+    width: 40%;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+/* ----------------------Ikonerna till sociala medier och under skills----------------- */
+
+.fa-brands {
+    font-size: 6rem;
+}
+
+/* -----------Bildlänken till mitt repo i github -----------------*/
+
+.project-one {
+    max-height: 500px;
+}

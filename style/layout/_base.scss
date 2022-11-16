@@ -1,0 +1,435 @@
+/* styling som gäller för hela sidan */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background: #fcf7f7;
+    font-family: 'Open Sans', sans-serif, helvetica;
+    scroll-behavior: smooth;
+    color: $dark-grey;
+}
+
+main {
+    text-align: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+}
+
+
+
+/*-------- Responsiv Hamburgersmeny start--------------
+ Gjord med hjälp av video av Kevin Powell  ---------*/
+
+.nav-header {
+    background-color: $base;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: $dark-grey;
+    height: 4px;
+    width: 2rem;
+    border-radius: 3px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    font-size: 2rem;
+    top: 100%;
+    left: 0;
+    background: $base;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: $dark-grey;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: $dark-pink;
+}
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+/* -----Hamburgermeny slut------------ */
+
+/* Behållare för första delen */
+.section-hello {
+    position: relative;
+    background-color: $base;
+    min-height: 60vh;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+/* ----------------------Profilbilden----------------- */
+.picture-container img {
+    border-radius: 9999px;
+    overflow-x: hidden;
+    border: 8px dotted $dark-pink;
+    margin-bottom: 60px;
+   
+}
+
+/* ----------------------Texten front delveloper...----------------- */
+.profession {
+    margin: 10px 60px 20px 70px;
+}
+
+/* ----------------------Style för alla h1----------------- */
+h1 {
+    margin: 50px 0 20px 50px;
+    font-size: clamp(3rem, 2.33rem + 3.33vw, 7rem);
+    font-family: 'Noto Nastaliq Urdu', serif;
+}
+
+/* ----------------------Style för alla p-taggar----------------- */
+
+p {
+    font-size: clamp(1rem, 0.83rem + 0.83vw, 2rem);
+}
+
+
+/* ----------------------style för alla h2----------------- */
+h2 {
+    margin: 60px 60px 20px 60px;
+    color: $dark-grey;
+    font-size: clamp(1.5rem, 0.9rem + 2.9vw, 5rem);
+}
+
+/* ----------------------style för alla h3----------------- */
+
+h3 {
+    font-size: clamp(1.5rem, 1.08rem + 2.08vw, 4rem);
+    margin-bottom: 30px;
+}
+
+/* ----------------------style för de horizontella linjerna under rubrikerna----------------- */
+
+hr {
+    width: 60vw;
+    margin: 15px auto;
+}
+
+/* ----------------------boxen med profilbilden----------------- */
+.picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: $base;
+    width: 100%;
+    padding: 10px;
+}
+
+/* ------------boxen med Hi I am ---------------------*/
+.box {
+    min-height: 2vh;
+    background-color: $base;
+    color: $dark-grey;
+}
+
+/* ----------------------radbrytning----------------- */
+.break-one {
+    display: none;
+}
+
+/* ---------Omsluter boxen med info om mig och bilden på blommorna----------- */
+.about-me {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    max-width: 100%;
+
+}
+
+/* -------Omsluter bilden på mig och texten---------------- */
+.container-two {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------------boxen med info om mig----------------- */
+.get-to-know-me {
+    background-color: $base;
+    min-height: 50vh;
+    padding: 30px;
+    border-radius: 10%;
+    margin-bottom: 20px;
+}
+
+/* ----------------------boxen med erfarenhet----------------- */
+.experience-container {
+    background-color: $pink;
+    min-height: 50vh;
+    padding: 30px;
+    border-radius: 10%;
+
+}
+
+/* ------------Omsluter allt i skills -------------*/
+.skills-container {
+    background-color: $base;
+    min-height: 30vh;
+    width: 100%;
+}
+
+/* ----------------------för att flytta p-taggarna i skills-containern----------------- */
+.skills-container p {
+    margin: 50px 0 70px 0;
+}
+
+/* -----------ikonerna i skills------------------ */
+.container-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ----------------------styling för ikonerna----------------- */
+.fa-brands {
+    color: $dark-grey;
+    font-size: 3rem;
+}
+
+/* ----------omsluter delen projekt ----------------*/
+.projects-container {
+    width: 100%;
+
+}
+
+/*------------- gridlayouten i projektdelen ----------------*/
+.grid-container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    grid-auto-flow: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.box-one {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.box-two {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: $base;
+}
+
+.box-three {
+    grid-area: 2 / 1 / 3/ 2;
+    background-color: $pink;
+}
+
+
+.box-four {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: $base;
+}
+
+.box-five {
+    grid-area: 3/ 1 / 4 / 2;
+    background-color: $pink;
+}
+
+.box-six {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: $base;
+}
+
+/* ----------------------gridlayout slut----------------- */
+
+/* -----------Bildlänken till mitt repo i github -----------------*/
+.project-one {
+    width: 100%;
+    height: 100%;
+}
+
+/* --------Styling för type="text", select elements och textareas i formuläret ----------*/
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid $dark-grey;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* ------Styling för knappen send----------- */
+.btn {
+    position: relative;
+    background-color: $dark-grey;
+    color: #f5f3eb;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+/* styling för när man för musen över knappen send */
+.btn:hover {
+    background-color: $base;
+    color: $dark-grey;
+}
+
+/* Behållare för formuläret*/
+.form-container {
+    width: 90%;
+    margin: 80px auto 90px auto;
+    text-align: left;
+    color: $dark-grey;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px
+}
+
+/* ----------------------styling för p-taggen i formuläret----------------- */
+.form-container p {
+    font-family: "tangerine", Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ----------------------Omlsuter ikonerna för sociala-medier ----------------- */
+
+.socialmedia-container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px 15px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.stalk-me {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.linkedin {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.github {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.instagram {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+/* ----------------------sociala-medier slut----------------- */
+
+
+/* Subject delen i formuläret */
+#subject {
+    height: 100px;
+}
+
+/* Styling för footern längst ner */
+footer {
+    background-color: $base;
+    min-height: 10vh;
+    width: 100vw;
+    padding-top: 20px;
+}
+
+/* styling för hjärtat i footern */
+.fa-solid {
+    color: $dark-pink;
+
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tittie Thomasson - Front end developer resume</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tittie Thomasson">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Front end developer looking for job">
+    <meta name="keywords" content="front-end-developer, resume, jobsearch, html, css, javascript">
+    <meta property="og:title" content="Tittie Thomasson resume">
+    <meta property="og:type" content="resume">
+    <!--Lägg in länk -->
+    <meta property="og:url" content="">
+    <!--Lägg in länk -->
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Rubik:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <main>
+        <div id="home"></div>
+        <header class="nav-header">
+            <div class="logo"><img src="Images/tittie-logo.png" alt="a pink splash logo with the initials TT" width="100" height="100">
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul>
+                    <li><a href="#home" aria-label="go to home section">Home</a></li>
+                    <li><a href="#about" aria-label="go to porjects section">About</a></li>
+                    <li><a href="#skills" aria-label="go to skills section">Skills</a></li>
+                    <li><a href="#projects" aria-label="go to projects section">Projects</a></li>
+                    <li><a href="#contact" aria-label="go to contact section">Contact</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+        <section class="section-hello">
+            <div class="box">
+                <h1>Hi, I'm Tittie!<br> </h1>
+                <h2 class="profession">
+                    Front End Developer and photographer</h2>
+            </div>
+            <!--Får inte helt rätt på detta med srcset så får klura vidare-->
+            <div class="picture-container">
+                <img alt="a girl holding a bouquet of dahlias" width="410" height="450"
+                    src="Images/tittie.png" data-src="Images/tittie.png"
+                    data-srcset="Images/tittie.png 400w" data-sizes="(max-width: 400px) 100vw, 400px"
+                    srcset="Images/tittie.png 400w" sizes="(max-width: 400px) 100vw, 400px">
+            </div>
+        </section>
+        <section class="about-me">
+            <header id="about">
+                <h2>About me</h2>
+                <hr>
+            </header>
+            <div class="container-two">
+                <div class="get-to-know-me">
+                    <h3>Get to know me</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ex?
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, voluptate.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consequuntur.
+                    </p>
+                </div>
+                <div class="experience-container">
+                    <h3>Experience</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ex?
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, voluptate.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consequuntur.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="skills-container">
+            <header id="skills">
+                <h2>Skills</h2>
+                <hr>
+            </header>
+            <h3>Lorem ipsum dolor sit.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <div class="container-icons">
+                <div class="icons"><i class="fa-brands fa-html5"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="icons"><i class="fa-brands fa-css3-alt"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="icons"><i class="fa-brands fa-github"></i>
+                    <p>Github</p>
+                </div>
+                <div class="icons"><i class="fa-brands fa-sass"></i>
+                    <p>SASS</p>
+                </div>
+            </div>
+            <h3>Lorem ipsum dolor sit.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </section>
+        <section class="projects-container">
+            <header id="projects">
+                <h2>Projects</h2>
+                <hr>
+            </header>
+            <div class="grid-container">
+                <div class="box-one">
+                    <a href="https://tittieth.github.io/to-the-moon/" aria-label="go to my project called to the moon"
+                        target="_blank">
+                        <img class="project-one" alt="to-the-moon-project" src="Images/to-the-moon.jpg" width="600"
+                            height="600"></a>
+                </div>
+                <div class="box-two"></div>
+                <div class="box-three"></div>
+                <div class="box-four"></div>
+                <div class="box-five"></div>
+                <div class="box-six"></div>
+            </div>
+        </section>
+        <section class="contact-form-container">
+            <header id="contact">
+                <h2>Contact</h2>
+                <hr>
+                <p></p>
+            </header>
+            <div class="contact-container">
+                <div class="form-container">
+                    <h3>Get in touch!</h3>
+                    <form action="action_page.php">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email..">
+
+                        <label for="subject">Subject:</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+                        <button class="btn" type="submit" value="send">
+                            <span>Send email</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="socialmedia-container">
+                    <div class="stalk-me">
+                        <h3>Let´s Connect!</h3>
+                    </div>
+                    <div class="linkedin">
+                        <a href="https://www.linkedin.com/in/tittie-thomasson/" target="_blank"
+                            aria-label="go to my linkedin">
+                            <i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div class="github"><a href="https://github.com/tittieth" target="_blank"
+                            aria-label="go to my github"><i class="fa-brands fa-github github-logo"></i></a></div>
+                    <div class="instagram"><a href="https://www.instagram.com/tittiet/" target="_blank"
+                            aria-label="go to my instagram"><i class="fa-brands fa-instagram"></i></a></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>©2022 Made with <i class="fa-solid fa-heart"></i> by Tittie Thomasson</p>
+        </footer>
+
+    </main>
+    <script src="https://kit.fontawesome.com/6e63925041.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
